@@ -1,0 +1,65 @@
+name: Sincronizar do GitHub para Plan.io
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync_github_to_planio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub - main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: github-source-repo
+
+      - name: Get last commit from GitHub
+        id: get_github_commit_message
+        run: |
+          cd github-source-repo
+          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+          CLEAN_COMMIT_MESSAGE=$(echo "$COMMIT_MESSAGE" | tr '\n' ' ' | sed 's/"/\\"/g')
+          echo "GITHUB_LAST_COMMIT_MESSAGE=$CLEAN_COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
+
+      - name:  SSH to Plan.io
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.PLANIO_SSH_PRIVATE_KEY }}
+
+      - name: Add Plan.io Host
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan meivcore.plan.io >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Clonar rep Plan.io
+        env:
+          PLANIO_SSH_REPO_URL: git@meivcore.plan.io:meivcore/innovation-labs.rfid-hw.git
+          PLANIO_USERNAME: ${{ secrets.PLANIO_USERNAME }}
+          PLANIO_EMAIL: ${{ secrets.PLANIO_EMAIL }}
+        run: |
+          git clone ${{ env.PLANIO_SSH_REPO_URL }} planio-target-repo
+          cd planio-target-repo
+          git checkout main || git checkout -b main
+          git config user.email "${{ env.PLANIO_EMAIL }}"
+          git config user.name "${{ env.PLANIO_USERNAME }}"
+
+      - name:  sync_github_to_planio
+        run: |
+          cd planio-target-repo
+          SOURCE_FOLDER="../github-source-repo"
+
+                    rsync -av --delete --exclude '.git' "${SOURCE_FOLDER}/" .
+
+          git add --all
+
+          
+          if git diff --cached --quiet; then
+            echo "Nothing to do."
+          else
+            git commit -m "${{ steps.get_github_commit_message.outputs.GITHUB_LAST_COMMIT_MESSAGE }} [skip ci]"
+            git push origin main --force-with-lease
+            echo "sync_github_to_planio done."
+          fi
