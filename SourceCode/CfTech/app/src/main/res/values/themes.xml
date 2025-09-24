@@ -1,0 +1,84 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CfTech" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#4682b4</item>
+        <item name="colorSecondaryContainer">#B3D6F4</item>
+
+        <!--        <item name="colorPrimaryDark">#123</item>-->
+        <!--        <item name="colorAccent">#123</item>-->
+        <!--        <item name="colorControlNormal">#123</item>-->
+        <!--        <item name="colorControlActivated">#123</item>-->
+        <!--        <item name="colorControlHighlight">#123</item>-->
+        <!--        <item name="colorButtonNormal">#123</item>-->
+        <!--        <item name="colorSwitchThumbNormal">#123</item>-->
+        <!--        <item name="colorBackgroundFloating">#123</item>-->
+        <!--        <item name="colorOnContainer">#123</item>-->
+        <!--        <item name="colorOnContainerUnchecked">#123</item>-->
+        <!--        <item name="colorOnError">#123</item>-->
+        <!--        <item name="colorOnErrorContainer">#123</item>-->
+        <!--        <item name="colorOnPrimary">#123</item>-->
+        <!--        <item name="colorOnPrimaryContainer">#123</item>-->
+        <!--        <item name="colorOnPrimaryFixed">#123</item>-->
+        <!--        <item name="colorOnPrimaryFixedVariant">#123</item>-->
+        <!--        <item name="colorOnPrimarySurface">#123</item>-->
+        <!--        <item name="colorOnSecondary">#123</item>-->
+        <!--        <item name="colorOnSecondaryContainer">#123</item>-->
+        <!--        <item name="colorOnSecondaryFixed">#123</item>-->
+        <!--        <item name="colorOnSecondaryFixedVariant">#123</item>-->
+        <!--        <item name="colorOnSurface">#123</item>-->
+        <!--        <item name="colorOnSurfaceInverse">#123</item>-->
+        <!--        <item name="colorOnSurfaceVariant">#123</item>-->
+        <!--        <item name="colorOnTertiary">#123</item>-->
+
+        <!--        <item name="colorOnTertiaryContainer">#123</item>-->
+        <!--        <item name="colorOnTertiaryFixed">#123</item>-->
+        <!--        <item name="colorOnTertiaryFixedVariant">#123</item>-->
+        <!--        <item name="colorOutline">#123</item>-->
+        <!--        <item name="colorOutlineVariant">#123</item>-->
+        <!--        <item name="colorPrimaryContainer">#123</item>-->
+        <!--        <item name="colorPrimaryFixed">#123</item>-->
+        <!--        <item name="colorPrimaryFixedDim">#123</item>-->
+        <!--        <item name="colorPrimaryInverse">#123</item>-->
+        <!--        <item name="colorPrimarySurface">#123</item>-->
+        <!--        <item name="colorPrimaryVariant">#123</item>-->
+        <!--        <item name="colorSecondary">#123</item>-->
+
+
+        <!--        <item name="colorSecondaryFixed">#123</item>-->
+
+        <!--        <item name="colorSecondaryFixedDim">#123</item>-->
+        <!--        <item name="colorSecondaryVariant">#123</item>-->
+
+        <!--        <item name="colorSurface">#123</item>-->
+        <!--        <item name="colorSurfaceBright">#123</item>-->
+        <!--        <item name="colorSurfaceContainer">#123</item>-->
+        <!--        <item name="colorSurfaceContainerHigh">#123</item>-->
+        <!--        <item name="colorSurfaceContainerHighest">#123</item>-->
+
+        <!--        <item name="colorSurfaceContainerLow">#123</item>-->
+        <!--        <item name="colorSurfaceContainerLowest">#123</item>-->
+        <!--        <item name="colorSurfaceDim">#123</item>-->
+        <!--        <item name="colorSurfaceInverse">#123</item>-->
+        <!--        <item name="colorSurfaceVariant">#123</item>-->
+        <!--        <item name="colorTertiary">#123</item>-->
+        <!--        <item name="colorTertiaryContainer">#123</item>-->
+        <!--        <item name="colorTertiaryFixed">#123</item>-->
+        <!--        <item name="colorTertiaryFixedDim">#123</item>-->
+
+    </style>
+
+    <style name="Theme.CfTech" parent="Base.Theme.CfTech" />
+
+    <style name="connect_type_btn_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="layout_constraintWidth_max">150dp</item>
+        <item name="layout_constraintWidth_percent">0.4</item>
+    </style>
+
+</resources>

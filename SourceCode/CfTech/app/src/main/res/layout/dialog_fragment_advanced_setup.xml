@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/advanced_config"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/dismiss_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/outline_cancel_24" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/start_address_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/start_addr"
+            android:inputType="number"
+            android:maxLength="2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mask_len_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mask_len"
+            android:inputType="number"
+            android:maxLength="2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mask_data_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/hex_digits"
+            android:hint="@string/mask_cpde" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/set_permission_param_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/save_config" />
+
+</LinearLayout>

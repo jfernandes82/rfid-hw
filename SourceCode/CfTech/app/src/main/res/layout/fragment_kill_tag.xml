@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ble.tag_operation.KillTagTagOperationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+            <EditText
+                android:id="@+id/kill_tag_pw_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/hex_digits"
+                android:hint="灭活口令(HEX)"
+                android:text="@string/tag_default_pw" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/kill_tag_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="灭活" />
+
+        <TextView
+            android:id="@+id/error_msg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_error_msg"
+            android:visibility="gone"
+            tools:text="错误信息" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CfTech" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#B7DEFF</item>
+        <!--        修改全局字体颜色-->
+        <item name="android:textColor">#FFFFFF</item>
+        <!--        修改底部导航栏着色器颜色-->
+        <item name="colorSecondaryContainer">#4682b4</item>
+        <!--        修改button字体颜色-->
+        <item name="colorOnPrimary">#4682b4</item>
+    </style>
+</resources>

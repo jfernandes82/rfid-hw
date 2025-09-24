@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ble.tag_operation.ReadTagTagOperationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/mem_bank_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_bg"
+            android:checkedButton="@id/epc_rb"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/reserve_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="RESERVE" />
+
+            <RadioButton
+                android:id="@+id/epc_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="EPC" />
+
+            <RadioButton
+                android:id="@+id/tid_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TID" />
+
+            <RadioButton
+                android:id="@+id/user_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="USER" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+            <EditText
+                android:id="@+id/acc_pwd_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/hex_digits"
+                android:hint="密码(HEX)"
+                android:text="@string/tag_default_pw" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+            <EditText
+                android:id="@+id/word_ptr_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="起始地址(WORD)"
+                android:inputType="number"
+                android:text="2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+            <EditText
+                android:id="@+id/word_count_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="数据长度(WORD)"
+                android:inputType="number"
+                android:text="2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+            app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+            <EditText
+                android:id="@+id/tag_data_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/hex_digits"
+                android:gravity="top|start"
+                android:hint="标签数据(HEX)"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/read_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="读取" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/write_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="写入" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tag_data_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/line_bg"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="top|start"
+            android:hint="Tag数据"
+            android:minHeight="100dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/error_msg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_error_msg"
+            android:visibility="gone"
+            tools:text="错误信息" />
+
+    </LinearLayout>
+
+</FrameLayout>

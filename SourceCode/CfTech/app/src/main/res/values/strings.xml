@@ -1,0 +1,189 @@
+<resources>
+    <string name="app_name" translatable="false">UHF Reader</string>
+    <string name="title_home">查询</string>
+    <string name="title_dashboard">扫描</string>
+    <string name="title_notifications">设置</string>
+    <string name="tag_default_pw">00 00 00 00</string>
+    <string name="hex_digits">0123456789abcdefABCDEF</string>
+    <string name="start_inventory">开始盘点</string>
+    <string name="stop_inventory">结束盘点</string>
+    <string name="clear_data">清空数据</string>
+    <string name="data_list">数据列表</string>
+    <string name="connection_type">连接方式</string>
+    <string name="ble">蓝牙</string>
+    <string name="usb">USB</string>
+    <string name="serial_port">串口</string>
+    <string name="lan_connect">局域网</string>
+    <string name="app_version">app版本信息</string>
+    <string name="pull_to_refresh">下拉刷新列表</string>
+    <string name="serial_data">串口数据</string>
+    <string name="serial_port_path">串口地址：</string>
+    <string name="baud_rate">波特率：</string>
+    <string name="place_input_data">请输入数据</string>
+    <string name="open_serial">打开串口</string>
+    <string name="send_data">发送数据</string>
+    <string name="close_serial">关闭串口</string>
+    <string name="current_tag">当前TAG</string>
+    <string name="read_tag">读标签</string>
+    <string name="lock_tag">锁标签</string>
+    <string name="kill_tag">灭活标签</string>
+    <string name="usb_data">USB 数据</string>
+    <string name="connect_device">连接设备</string>
+    <string name="advanced_config">高级配置</string>
+    <string name="start_addr">掩码起始位置(0~31)</string>
+    <string name="mask_len">掩码长度(0~31)</string>
+    <string name="mask_cpde">掩码(HEX)</string>
+    <string name="save_config">设置</string>
+    <string name="inventory_config">盘点参数配置</string>
+    <string name="inventory_type">盘点方式</string>
+    <string name="inventory_config_txt">查询配置</string>
+    <string name="tag_storage_area">标签存储区区域</string>
+    <string name="epc">EPC</string>
+    <string name="tid">TID</string>
+    <string name="user">USER</string>
+    <string name="inventory_period">查询间隔时间(*10ms)</string>
+    <string name="inventory_start_addr">起始地址(Byte)</string>
+    <string name="inventory_byte_len">字节长度(Byte)</string>
+    <string name="inventory_filter_time">过滤时间(S)</string>
+    <string name="data_format">数据编码格式</string>
+    <string name="ascii">ASCII</string>
+    <string name="hex">HEX</string>
+    <string name="tag_total">标签\n总数</string>
+    <string name="inventory_total">查询\n总数</string>
+    <string name="scan_data">扫码数据</string>
+    <string name="start_scan">开始扫描</string>
+    <string name="tag_list">TAG列表</string>
+    <string name="battery_level">设备电量:</string>
+    <string name="hw_version">硬件版本：</string>
+    <string name="firmware_version">固件版本：</string>
+    <string name="device_name">设备名称</string>
+    <string name="output_mode">输出模式:</string>
+    <string name="operating_frequency">工作频段:</string>
+    <string name="output_power">输出功率:</string>
+    <string name="q_value">Q Value:</string>
+    <string name="session">Session:</string>
+    <string name="restore">恢复出厂设置</string>
+    <string name="refresh_data">刷新数据</string>
+    <string name="bt_name">蓝牙名称</string>
+    <string name="bt_mac_addr">蓝牙地址</string>
+    <string name="data">数据</string>
+    <string name="ip_and_port">地址+端口号</string>
+    <string name="scan_data_txt">ScanData:</string>
+    <string name="scan_data_num">Num:</string>
+    <string name="get_config_info">获取配置信息</string>
+    <string name="get_config_info_timeout">获取配置超时</string>
+    <string name="place_stop_inventory_first">盘点中，请先结束盘点</string>
+    <string name="getting_configuration">获取配置中…</string>
+    <string name="request_permission_tips">请授予软件必要的权限，以保证软件正常运行</string>
+    <string name="oem_name" translatable="false">CHAFON</string>
+    <string name="empty_data_list">数据列表为空</string>
+    <string name="without_usb_device">设备没有USB设备</string>
+    <string name="fail_get_serial_path">串口地址获取失败</string>
+
+    <string-array name="serial_data_charset_value">
+        <item>ASCII</item>
+        <item>HEX</item>
+    </string-array>
+
+    <string-array name="serial_baud_rate_value">
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+    </string-array>
+
+    <string-array name="output_mode_value">
+        <item>透传</item>
+        <item>HID</item>
+    </string-array>
+
+    <string-array name="operating_frequency_value">
+        <item>USA</item>
+        <item>Europe</item>
+    </string-array>
+
+    <string-array name="output_power_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+    </string-array>
+
+    <string-array name="tag_operation_label_value">
+        <item>读写标签</item>
+        <item>锁定标签</item>
+        <item>灭活标签</item>
+    </string-array>
+
+    <string-array name="q_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+
+    <string-array name="session_value">
+        <item>S0</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+        <item>Auto-1</item>
+        <item>Auto-2</item>
+        <item>Auto-3</item>
+    </string-array>
+
+    <string-array name="inventory_type">
+        <item>按时间盘点标签</item>
+        <item>按次数盘点标签</item>
+    </string-array>
+
+    <integer-array name="inventory_type_value">
+        <item>0</item>
+        <item>1</item>
+    </integer-array>
+
+</resources>

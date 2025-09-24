@@ -1,0 +1,90 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.cf.tech'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.cf.tech"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('..\\cf_keystore.jks')
+            storePassword 'cftech23202330'
+            keyAlias 'cf_tech'
+            keyPassword 'cftech23202330'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                outputFileName = "cf_tech_${variant.buildType.name}_v${versionName}_${getBuildTime()}.apk"
+            }
+        }
+    }
+}
+
+static def getBuildTime() {
+    return new Date().format("yyyyMMddHHmmss")
+}
+
+
+dependencies {
+    //implementation fileTree(dir: 'libs', include: ['cf-sdk-v1.0.0.aar'])
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.swiperefreshlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation project(':cf-sdk')
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation(libs.eventbus)
+    implementation libs.easypermissions
+    implementation libs.mmkv
+    debugImplementation libs.leakcanary.android
+}

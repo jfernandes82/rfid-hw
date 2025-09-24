@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/inventory_config_txt"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/dismiss_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/outline_cancel_24" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/line_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/tag_storage_area" />
+
+        <RadioGroup
+            android:id="@+id/storage_region_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/epc_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/epc" />
+
+            <RadioButton
+                android:id="@+id/tid_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tid" />
+
+            <RadioButton
+                android:id="@+id/user_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/user" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/polling_interval_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inventory_period"
+            android:inputType="number"
+            android:maxLength="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/acs_addr_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inventory_start_addr"
+            android:inputType="number"
+            android:maxLength="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/acs_data_len_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inventory_byte_len"
+            android:inputType="number"
+            android:maxLength="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxCornerRadiusBottomEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusBottomStart="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopEnd="@dimen/text_input_edit_text_radius"
+        app:boxCornerRadiusTopStart="@dimen/text_input_edit_text_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filter_time_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inventory_filter_time"
+            android:inputType="number"
+            android:maxLength="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/set_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/save_config" />
+
+    </RelativeLayout>
+
+</LinearLayout>
